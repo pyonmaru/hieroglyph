@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charaset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>ヒエログリフ逆変換マシーン</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    
+
+<script type="text/javascript">
+   function repStr() {
+        var str = document.getElementById("dat").value;
+        document.getElementById("dat2").value = str.
+        replace(/𓄿/g, "a").
+        replace(/𓇌/g, "i").
+        replace(/𓅱/g, "u(w)").
+        replace(/𓇋/g, "e").
+        replace(/𓍯/g, "o").
+        replace(/𓎡/g, "k").
+        replace(/𓋴/g, "s").
+        replace(/𓏏/g, "t").
+        replace(/𓈖/g, "n").
+        replace(/𓉔/g, "h").
+        replace(/𓅓/g, "m").
+        replace(/𓂋/g, "r").
+        replace(/𓎼/g, "g").
+        replace(/𓊃/g, "z").
+        replace(/𓂩/g, "d").
+        replace(/𓃀/g, "b").
+        replace(/𓍿/g, "ch").
+        replace(/𓆑/g, "f").
+        replace(/𓆓/g, "j").
+        replace(/𓐚/g, "sh");
+    }
+    </script>
+    
+    <div style="background-color : #CCC; padding : 50px 30px 50px;">
+        <h1>ヒエログリフ逆変換マシーン</h1>
+        <h1>𓏏𓍯𓏏𓇋𓅓𓍯𓅓𓅱𓂩𓄿𓂩𓇋𓋴𓅱</h1>
+        
+        <div style="display:inline-block;">
+        <label>▼ヒエログリフを入力してね</label><br>
+          <input type="text" id="dat">
+          <input type="button" value="置換" onClick="repStr()">
+          <br>
+          <label>▼ローマ字変換結果</label><br>
+          <input type="text" id="dat2">
+        </div>
+    </div>
