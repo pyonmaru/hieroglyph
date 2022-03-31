@@ -41,6 +41,14 @@
         replace(/𓏤/g, "p").
         replace(/𓏘/g, "q");
     }
+    
+    function clearTextarea() {
+        var textareaForm1 = document.getElementById("dat");
+        textareaForm1.value = '';
+        var textareaForm2 = document.getElementById("dat2");
+        textareaForm2.value = '';
+    }
+    
     </script>
     
     <div style="background-color : #CCC; padding : 50px 30px 80px;">
@@ -52,6 +60,7 @@
           <textarea id="dat" cols="30" rows="5"></textarea>
           <br>
           <input type="button" value="変換" onClick="repStr()">
+          <input type="button" value="クリア" onclick="clearTextarea()" />  
           <br>
           <label>▼ローマ字変換結果</label><br>
           <textarea id="dat2" cols="30" rows="5"></textarea>
